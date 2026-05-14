@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Grupo Modelo | Control de Vida</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="container">
+
+    <div class="header">
+
+        <div>
+
+            <h1>CONTROL DE VIDA DE PRODUCTO</h1>
+
+            <p>GRUPO MODELO · CALIDAD E INVENTARIOS</p>
+
+        </div>
+
+        <div class="logo">
+
+            GM
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="input-group">
+
+            <label>SKU</label>
+
+            <!-- INPUT CON AUTOCOMPLETE -->
+
+            <input
+                list="skuList"
+                id="skuInput"
+                placeholder="Escribe o selecciona SKU"
+            >
+
+            <datalist id="skuList"></datalist>
+
+        </div>
+
+        <div class="input-group">
+
+            <label>LOTE</label>
+
+            <input
+                type="text"
+                id="lote"
+                placeholder="Ejemplo: D106"
+            >
+
+        </div>
+
+        <button onclick="calcularVida()">
+
+            ANALIZAR PRODUCTO
+
+        </button>
+
+    </div>
+
+    <div class="resultado" id="resultado">
+
+        <h2>RESULTADO</h2>
+
+        <div class="grid">
+
+            <div class="info">
+
+                <span>MATERIAL</span>
+
+                <strong id="material"></strong>
+
+            </div>
+
+            <div class="info">
+
+                <span>FECHA LOTE</span>
+
+                <strong id="fechaLote"></strong>
+
+            </div>
+
+            <div class="info">
+
+                <span>VIDA MÁXIMA</span>
+
+                <strong>
+                    <span id="vidaMaxima"></span> DÍAS
+                </strong>
+
+            </div>
+
+            <div class="info">
+
+                <span>DÍAS TRANSCURRIDOS</span>
+
+                <strong id="diasActuales"></strong>
+
+            </div>
+
+            <div class="info">
+
+                <span>% CONSUMIDO</span>
+
+                <strong>
+                    <span id="porcentaje"></span>%
+                </strong>
+
+            </div>
+
+        </div>
+
+        <div class="estatus" id="estatus"></div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
