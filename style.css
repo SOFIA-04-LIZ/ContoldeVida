@@ -75,7 +75,7 @@ body{
 
 .logo{
 
-    width:95px;
+    width:200px;
 
     height:95px;
 
@@ -93,7 +93,7 @@ body{
 
     align-items:center;
 
-    color:#111827;
+    color:#000101;
 
     font-size:34px;
 
@@ -105,7 +105,7 @@ body{
 
 .card{
 
-    background:rgba(17,24,39,0.88);
+    background:rgba(0, 0, 0, 0.521);
 
     border:1px solid rgba(255,208,0,0.15);
 
@@ -157,7 +157,7 @@ input{
 
     padding:0px 20px;
 
-    background:#111827;
+    background:rgba(0, 0, 0, 0.832);
 
     color:white;
 
@@ -192,7 +192,7 @@ button{
         #f59e0b
     );
 
-    color:#111827;
+    color:#0c0c05;
 
     font-size:16px;
 
@@ -217,7 +217,7 @@ button:hover{
 
     margin-top:30px;
 
-    background:rgba(17,24,39,0.9);
+    background:rgba(0, 0, 0, 0.552);
 
     border-radius:32px;
 
@@ -249,7 +249,7 @@ button:hover{
 
 .info{
 
-    background:#0f172a;
+    background:#00000094;
 
     border-radius:22px;
 
@@ -334,7 +334,7 @@ button:hover{
     .card{
 
         grid-template-columns:1fr;
-    }
+    }   
 
     button{
 
