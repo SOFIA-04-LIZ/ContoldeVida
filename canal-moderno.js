@@ -1,5 +1,4 @@
 const productos = [
-
 { sku:"3000003", material:"CORONA EXTRA BOTE H-C 24/355 ML CT", vidaMaxima:360 },
 { sku:"3000009", material:"CORONA EXTRA AMBAR 24/355 ML CT R", vidaMaxima:360 },
 { sku:"3000014", material:"MODELO ESPECIAL BARRIL CHOPE 29 L CT R", vidaMaxima:75 },
@@ -1073,14 +1072,187 @@ const productos = [
 { sku:"3008440", material:"PS 6PK 24/355 ML NR", vidaMaxima:360 },
 { sku:"3008478", material:"PACIFICO 6 PK 24/355 ML NR CI", vidaMaxima:360 },
 { sku:"3008440", material:"PS 6PK 24/355 ML NR", vidaMaxima:360 }
-    
 
 ];
 
+// ==========================================
+// CADENAS
+// ==========================================
+
+const cadenasData = [
+
+    {
+        cadena:"7 ELEVEN",
+        diasAceptacion:115
+    },
+
+    {
+        cadena:"ARAMBURO",
+        diasAceptacion:115
+    },
+
+    {
+        cadena:"OXXO",
+        diasAceptacion:135
+    },
+
+    {
+        cadena:"WAL MART",
+        diasAceptacion:115
+    },
+
+     {
+        cadena:"ASTURIANO",
+        diasAceptacion:115
+    },
+
+     {
+        cadena:"CHEDRAUI",
+        diasAceptacion:115
+    },
+
+     {
+        cadena:"CITY CLUB",
+        diasAceptacion:165
+    },
+  
+      {
+        cadena:"CABRITO ABARROTERO",
+        diasAceptacion:0
+    },
+
+      {
+        cadena:"CALIMAX",
+        diasAceptacion:115
+    },
+    
+      {
+        cadena:"CASA LEY",
+        diasAceptacion:115
+    },
+
+     {
+        cadena:"CITY FRESKO",
+        diasAceptacion:115
+    },
+    {
+        cadena:"CONASUPER",
+        diasAceptacion:0
+    },
+
+      {
+        cadena:"COSTCO",
+        diasAceptacion:115
+    },
+
+    {
+        cadena:"EL DUERO",
+        diasAceptacion:115
+    },
+
+    {
+        cadena:"EXTRA",
+        diasAceptacion:115
+    },
+
+     {
+        cadena:"FUTURAMA",
+        diasAceptacion:135
+    },
+
+     {
+        cadena:"GO MART",
+        diasAceptacion:115
+    },
+
+    {
+        cadena:"HEB",
+        diasAceptacion:195
+    },
+    {
+        cadena:"KIOSKO",
+        diasAceptacion:115
+    },
+
+    {
+        cadena:"LA EUROPEA",
+        diasAceptacion:195
+    },
+    {
+        cadena:"OPERADORA MERCO",
+        diasAceptacion:0
+    },
+
+    {
+        cadena:"PREMIUM BEERS",
+        diasAceptacion:255
+    },
+    {
+        cadena:"SAMS CLUB",
+        diasAceptacion:115
+    },
+
+    {
+        cadena:"SAN FRANCISCO DE ASIS",
+        diasAceptacion:115
+    },
+
+    {
+        cadena:"SMART",
+        diasAceptacion:195
+    },
+
+    {
+        cadena:"SORIANA",
+        diasAceptacion:165
+    },
+
+    {
+        cadena:"SUPER BARA",
+        diasAceptacion:115
+    },
+
+    {
+        cadena:"SUPER KOMPRAS",
+        diasAceptacion:0
+    },
+     {
+        cadena:"SUPER OFERTAS",
+        diasAceptacion:0
+    },
+
+      {
+        cadena:"SUPER TIENDAZZ",
+        diasAceptacion:0
+    },
+
+
+    
+      {
+        cadena:"TIENDAS NETO",
+        diasAceptacion:0
+    },
+
+    {
+        cadena:"VIG S",
+        diasAceptacion:115
+    },
+
+    {
+        cadena:"ZORRO",
+        diasAceptacion:115
+    }
+
+
+];
+
+
+// ==========================================
+// AUTOCOMPLETE SKU
+// ==========================================
+
 const skuList =
 document.getElementById("skuList");
-
-// LLENAR AUTOCOMPLETE
 
 productos.forEach(producto=>{
 
@@ -1097,7 +1269,33 @@ productos.forEach(producto=>{
 
 });
 
-// CONVERTIR LETRA A MES
+
+// ==========================================
+// SELECT CADENAS
+// ==========================================
+
+const cediSelect =
+document.getElementById("cediSelect");
+
+cadenasData.forEach(cadena=>{
+
+    const option =
+    document.createElement("option");
+
+    option.value =
+    cadena.cadena;
+
+    option.textContent =
+    cadena.cadena;
+
+    cediSelect.appendChild(option);
+
+});
+
+
+// ==========================================
+// OBTENER MES
+// ==========================================
 
 function obtenerMes(letra){
 
@@ -1120,9 +1318,12 @@ function obtenerMes(letra){
     return meses[letra.toUpperCase()];
 }
 
-// CALCULAR VIDA
 
-function calcularVida(){
+// ==========================================
+// VALIDAR
+// ==========================================
+
+function validarCanalModerno(){
 
     const sku =
     document.getElementById("skuInput")
@@ -1134,12 +1335,30 @@ function calcularVida(){
     .value
     .trim();
 
-    if(!sku || !lote){
+    const cadenaSeleccionada =
+    document.getElementById("cediSelect")
+    .value;
+
+
+    // ======================================
+    // VALIDAR CAMPOS
+    // ======================================
+
+    if(
+        !sku ||
+        !lote ||
+        !cadenaSeleccionada
+    ){
 
         alert("Completa todos los campos");
 
         return;
     }
+
+
+    // ======================================
+    // BUSCAR PRODUCTO
+    // ======================================
 
     const producto =
     productos.find(
@@ -1153,7 +1372,27 @@ function calcularVida(){
         return;
     }
 
-    // D106
+
+    // ======================================
+    // BUSCAR CADENA
+    // ======================================
+
+    const cadena =
+    cadenasData.find(
+        c => c.cadena === cadenaSeleccionada
+    );
+
+    if(!cadena){
+
+        alert("Cadena no encontrada");
+
+        return;
+    }
+
+
+    // ======================================
+    // VALIDAR LOTE
+    // ======================================
 
     const letraMes =
     lote.charAt(0);
@@ -1174,6 +1413,11 @@ function calcularVida(){
         return;
     }
 
+
+    // ======================================
+    // FECHAS
+    // ======================================
+
     const fechaLote =
     new Date(anio, mes - 1, dia);
 
@@ -1189,45 +1433,97 @@ function calcularVida(){
         (1000 * 60 * 60 * 24)
     );
 
-    const porcentaje =
-    (
-        diasActuales /
-        producto.vidaMaxima
-    ) * 100;
 
-    let resultado = "";
+    // ======================================
+    // PORCENTAJE
+    // ======================================
+// ======================================
+// VIDA RESTANTE
+// ======================================
 
-    if(porcentaje > 30){
+const vidaRestante =
+producto.vidaMaxima - diasActuales;
 
-        resultado = "✖ RECHAZAR";
 
-    }else{
+// ======================================
+// PORCENTAJE
+// ======================================
 
-        resultado = "✔ ACEPTAR";
-    }
+const porcentaje =
+(
+    diasActuales /
+    producto.vidaMaxima
+) * 100;
+
+
+// ======================================
+// RESULTADO
+// ======================================
+
+let resultado = "";
+
+if(cadena.diasAceptacion === 0){
+
+    resultado =
+    "BAJO NEGOCIACIÓN";
+
+}
+else if(
+    vidaRestante >=
+    cadena.diasAceptacion
+){
+
+    resultado =
+    "✔ SE PUEDE ENVIAR";
+
+}
+else{
+
+    resultado =
+    "✖ NO SE PUEDE ENVIAR";
+}
+
+
+    // ======================================
+    // MOSTRAR RESULTADO
+    // ======================================
 
     document.getElementById("resultado")
     .style.display = "block";
 
-    document.getElementById("material")
-    .textContent =
-    producto.material;
 
-    document.getElementById("fechaLote")
+    document.getElementById("cadena")
     .textContent =
-    fechaLote.toLocaleDateString();
+    cadena.cadena;
 
-    document.getElementById("vidaMaxima")
-    .textContent =
-    producto.vidaMaxima;
 
-    document.getElementById("diasActuales")
+    document.getElementById("dias")
     .textContent =
     diasActuales;
 
+    document.getElementById("vidaRestante")
+    .textContent =
+    vidaRestante;
+
+
+    document.getElementById("diasAceptacion")
+    .textContent =
+
+    cadena.diasAceptacion === 0
+
+    ? "BAJO NEGOCIACIÓN"
+
+    : cadena.diasAceptacion;
+
+
     document.getElementById("porcentaje")
     .textContent =
-    porcentaje.toFixed(2);
+    porcentaje.toFixed(2) + "%";
+
+
+    // ======================================
+    // ESTATUS
+    // ======================================
 
     const estatus =
     document.getElementById("estatus");
@@ -1237,19 +1533,55 @@ function calcularVida(){
 
     estatus.classList.remove(
         "aceptar",
-        "rechazar"
+        "rechazar",
+        "warning"
     );
 
-    if(resultado === "✔ ACEPTAR"){
+
+    if(resultado.includes("✔ SE PUEDE ENVIAR")){
 
         estatus.classList.add(
             "aceptar"
         );
 
-    }else{
+    }
+    else if(
+        resultado.includes("BAJO NEGOCIACIÓN")
+    ){
+
+        estatus.classList.add(
+            "validar"
+        );
+
+    }
+    else{
 
         estatus.classList.add(
             "rechazar"
         );
     }
+
+}
+
+
+// ==========================================
+// MENU RESPONSIVE
+// ==========================================
+
+const menuToggle =
+document.getElementById("menuToggle");
+
+const navLinks =
+document.getElementById("navLinks");
+
+if(menuToggle){
+
+    menuToggle.addEventListener("click", ()=>{
+
+        navLinks.classList.toggle(
+            "active"
+        );
+
+    });
+
 }

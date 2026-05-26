@@ -1,18 +1,14 @@
-<!DOCTYPE html>
 <html lang="es">
-
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Grupo Modelo | Control de Vida</title>
+    <title>Grupo Modelo | Canal Moderno</title>
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,7 +18,6 @@
 <body>
 
 <div class="overlay"></div>
-
 <nav class="menu-abinbev">
 
     <div class="menu-logo">
@@ -33,11 +28,11 @@
 
     <div class="menu-links" id="menuLinks">
 
-        <a href="index.html" class="active">
+        <a href="index.html" >
             Inicio
         </a>
 
-        <a href="canal-moderno.html">
+        <a href="canal-moderno.html"  class="active">
             Canal Moderno
         </a>
 
@@ -61,27 +56,25 @@
 
         <div>
 
-            <h1>CONTROL DE VIDA DE PRODUCTO</h1>
+            <h1>CANAL MODERNO</h1>
 
-            <p>GRUPO MODELO · CALIDAD DE PRODUCTO</p>
+            <p>VALIDACIÓN DE FRESCURA · GRUPO MODELO</p>
 
         </div>
 
         <div class="logo">
-
-            CONTROL
-
+            MODERNO
         </div>
 
     </div>
 
     <div class="card">
 
+        
+
         <div class="input-group">
 
             <label>SKU</label>
-
-            <!-- INPUT CON AUTOCOMPLETE -->
 
             <input
                 list="skuList"
@@ -106,13 +99,29 @@
 
         </div>
 
-        <button onclick="calcularVida()">
+                <div class="input-group">
 
+                    <label>CADENA</label>
+
+                    <select id="cediSelect" class="custom-select">
+
+                        <option value="">
+                            Selecciona cadena
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <button onclick="validarCanalModerno()">
             ANALIZAR PRODUCTO
-
         </button>
 
-    </div>
+        </div>
+
+        
+
+    
 
     <div class="resultado" id="resultado">
 
@@ -121,47 +130,32 @@
         <div class="grid">
 
             <div class="info">
-
-                <span>MATERIAL</span>
-
-                <strong id="material"></strong>
-
+                <span>CADENA</span>
+                <strong id="cadena"></strong>
             </div>
 
-            <div class="info">
-
-                <span>FECHA LOTE</span>
-
-                <strong id="fechaLote"></strong>
-
-            </div>
 
             <div class="info">
-
-                <span>VIDA MÁXIMA</span>
-
-                <strong>
-                    <strong id="vidaMaxima"></strong> DÍAS
-                </strong>
-
-            </div>
-
-            <div class="info">
-
                 <span>DÍAS TRANSCURRIDOS</span>
-
-                <strong id="diasActuales"></strong>
-
+                <strong id="dias"></strong>
             </div>
 
             <div class="info">
 
-                <span>% VIDA UTIL</span>
+                <span>VIDA RESTANTE</span>
 
-                <strong>
-                    <strong id="porcentaje"></strong>%
-                </strong>
+                <strong id="vidaRestante"></strong>
 
+            </div>
+
+            <div class="info">
+                <span>DÍAS DE ACEPTACIÓN</span>
+                <strong id="diasAceptacion"></strong>
+            </div>
+
+            <div class="info">
+                <span>PORCENTAJE DE VIDA</span>
+                <strong id="porcentaje"></strong>
             </div>
 
         </div>
@@ -172,7 +166,10 @@
 
 </div>
 
-<script src="script.js"></script>
+</div>
+
+<script src="canal-moderno.js"></script>
+
 <script>
 
 const menuToggle =
@@ -187,8 +184,7 @@ menuToggle.addEventListener("click", function(){
 
 });
 
-</script>      
+</script>
 
 </body>
-
 </html>

@@ -4,7 +4,6 @@
     padding:0;
     box-sizing:border-box;
 }
-
 body{
 
     font-family:'Montserrat', sans-serif;
@@ -16,27 +15,277 @@ body{
         rgba(0,0,0,0.72),
         rgba(0,0,0,0.78)
     ),
-
     url('https://elceo.com/wp-content/uploads/2023/04/startuo-modelo.jpg');
 
     background-size:cover;
 
     background-position:center;
 
+    background-attachment:fixed;
+
+    overflow-x:hidden;
+
+    padding:120px 30px 40px 30px;
+
     display:flex;
 
     justify-content:center;
-
-    align-items:center;
-
-    padding:30px;
 }
 
 .container{
 
     width:100%;
+
     max-width:1050px;
+
+    margin:auto;
 }
+
+/* ==========================================
+MENU AB INBEV
+========================================== */
+
+.menu-abinbev{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:82px;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.449),
+        rgba(20, 20, 20, 0.333)
+    );
+
+   
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 40px;
+
+    z-index:9999;
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+    0px 5px 25px rgba(255,208,0,0.18);
+
+}
+
+
+/* ==========================================
+LOGO
+========================================== */
+
+.menu-logo{
+
+    color:#ffd000;
+
+    font-size:28px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    text-shadow:
+    0px 0px 15px rgba(255,208,0,0.35);
+
+}
+
+
+/* ==========================================
+LINKS
+========================================== */
+
+.menu-links{
+
+    display:flex;
+
+    gap:35px;
+
+    align-items:center;
+
+}
+
+.menu-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    position:relative;
+
+    transition:0.3s;
+
+}
+
+
+/* EFECTO HOVER */
+
+.menu-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-8px;
+
+    width:0%;
+
+    height:3px;
+
+    background:#ffd000;
+
+    transition:0.3s;
+
+}
+
+.menu-links a:hover{
+
+    color:#ffd000;
+
+}
+
+.menu-links a:hover::after{
+
+    width:100%;
+
+}
+
+
+/* ==========================================
+BOTON MOBILE
+========================================== */
+
+.menu-toggle{
+
+    display:none;
+
+    color:#ffd000;
+
+    font-size:34px;
+
+    cursor:pointer;
+
+}
+
+
+/* ==========================================
+RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+    .menu-abinbev{
+
+        padding:0 20px;
+    }
+
+    .menu-toggle{
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        width:48px;
+
+        height:48px;
+
+        border-radius:12px;
+
+        background:rgba(255,208,0,0.08);
+
+        z-index:999999;
+
+    }
+
+    .menu-links{
+
+        position:fixed;
+
+        top:82px;
+
+        left:-100%;
+
+        width:100%;
+
+        height:auto;
+
+        background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,0.98),
+            rgba(15,15,15,0.98)
+        );
+
+        flex-direction:column;
+
+        align-items:center;
+
+        justify-content:center;
+
+        gap:25px;
+
+        padding:40px 0px;
+
+        border-bottom:
+        2px solid #ffd000;
+
+        transition:0.4s;
+
+        z-index:99999;
+
+        backdrop-filter:blur(15px);
+
+        display:flex;
+    }
+
+    .menu-links.show{
+
+        left:0;
+    }
+
+    .menu-links a{
+
+        width:85%;
+
+        text-align:center;
+
+        padding:18px;
+
+        font-size:18px;
+
+        border-radius:18px;
+    }
+
+}
+
+/* ==========================================
+AJUSTE GENERAL
+========================================== */
+
+
 
 .header{
 
@@ -305,6 +554,14 @@ button:hover{
         #22c55e
     );
 }
+.Validar{
+
+    background:linear-gradient(
+        135deg,
+        #ffb300,
+        #ffde20
+    );
+}
 
 .rechazar{
 
@@ -340,4 +597,197 @@ button:hover{
 
         grid-column:span 1;
     }
+}
+
+/* =========================================
+SELECT PREMIUM AB INBEV
+========================================= */
+
+.custom-select{
+
+    width:100%;
+
+    height:58px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:18px;
+
+    padding:0 20px;
+
+    background:
+    rgba(0,0,0,0.82);
+
+    color:white;
+
+    border:1px solid rgba(255,208,0,0.15);
+
+    font-size:16px;
+
+    transition:0.3s;
+
+    appearance:none;
+
+    -webkit-appearance:none;
+
+    -moz-appearance:none;
+
+    cursor:pointer;
+
+    font-family:'Montserrat', sans-serif;
+
+    font-weight:500;
+
+    box-shadow:
+    inset 0px 0px 10px rgba(255,208,0,0.03);
+
+}
+
+
+/* =========================================
+HOVER
+========================================= */
+
+.custom-select:hover{
+
+    border:1px solid rgba(255,208,0,0.4);
+
+    box-shadow:
+    0px 0px 12px rgba(255,208,0,0.12);
+}
+
+
+/* =========================================
+FOCUS
+========================================= */
+
+.custom-select:focus{
+
+    border:1px solid #ffd000;
+
+    box-shadow:
+    0px 0px 18px rgba(255,208,0,0.35);
+}
+
+
+/* =========================================
+FLECHA PERSONALIZADA
+========================================= */
+
+.input-group{
+
+    position:relative;
+}
+
+.input-group::after{
+
+    content:"▼";
+
+    position:absolute;
+
+    right:20px;
+
+    top:53px;
+
+    color:#ffd000;
+
+    pointer-events:none;
+
+    font-size:13px;
+
+}
+
+
+/* =========================================
+OPTIONS
+========================================= */
+
+.custom-select option{
+
+    background:#111111;
+
+    color:white;
+
+    padding:12px;
+}
+
+.menu-links a{
+
+    position:relative;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    font-size:17px;
+
+    padding:12px 18px;
+
+    border-radius:14px;
+
+    transition:0.3s;
+}
+
+/* HOVER */
+
+.menu-links a:hover{
+
+    color:#ffd000;
+
+    background:rgba(255,208,0,0.08);
+}
+
+/* ACTIVO */
+
+.menu-links a.active{
+
+    color:#000;
+
+    background:linear-gradient(
+        135deg,
+        #ffcc00e3,
+        #f5b800dc
+    );
+
+    box-shadow:
+    0px 0px 18px rgba(255,208,0,0.35);
+}
+
+/* LINEA */
+
+.menu-links a.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:15%;
+
+    bottom:-6px;
+
+    width:70%;
+
+    height:3px;
+
+    border-radius:10px;
+
+    background:#ffd000;
+}
+
+.card,
+.resultado,
+.header{
+
+    position:relative;
+
+    z-index:1;
+}
+
+.menu-abinbev{
+
+    z-index:999999;
 }

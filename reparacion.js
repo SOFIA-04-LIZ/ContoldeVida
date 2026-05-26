@@ -1197,13 +1197,15 @@ function calcularVida(){
 
     let resultado = "";
 
-    if(porcentaje > 30){
+    if(porcentaje > 0  && porcentaje< 60){
 
-        resultado = "✖ RECHAZAR";
+        resultado = "✔ DENTRO DE FRESCURA";
 
-    }else{
+    }else if(porcentaje > 59  && porcentaje< 80){
 
-        resultado = "✔ ACEPTAR";
+        resultado = "⚠ VALIAR CON ENCARGADO DE FRESCURA";
+    } else{
+         resultado = "✖ RECHAZAR";
     }
 
     document.getElementById("resultado")
@@ -1240,16 +1242,22 @@ function calcularVida(){
         "rechazar"
     );
 
-    if(resultado === "✔ ACEPTAR"){
+    if(resultado === "✔ DENTRO DE FRESCURA"){
 
         estatus.classList.add(
             "aceptar"
         );
 
-    }else{
+    }else if(resultado === "⚠ VALIAR CON ENCARGADO DE FRESCURA"){
 
+        estatus.classList.add(
+            "Validar"
+        );
+
+    } else {
         estatus.classList.add(
             "rechazar"
         );
+
     }
 }
