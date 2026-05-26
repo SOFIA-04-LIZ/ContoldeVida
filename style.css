@@ -779,3 +779,81 @@ html{
 
     scroll-behavior:smooth;
 }
+
+/* ==========================================
+FIX MENU MOBILE
+========================================== */
+
+.menu-toggle{
+
+    position:relative;
+
+    z-index:1000001;
+}
+
+.menu-links{
+
+    z-index:1000000;
+}
+
+@media(max-width:900px){
+
+    .menu-links{
+
+        position:fixed;
+
+        top:75px;
+
+        left:-100%;
+
+        width:100%;
+
+        height:auto;
+
+        display:flex;
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:center;
+
+        gap:20px;
+
+        padding:35px 20px;
+
+        background:
+        rgba(0,0,0,0.97);
+
+        backdrop-filter:blur(20px);
+
+        transition:left 0.4s ease;
+
+        border-bottom:
+        2px solid rgba(255,208,0,0.25);
+    }
+
+    .menu-links.show{
+
+        left:0;
+    }
+
+    .menu-links a{
+
+        width:100%;
+
+        max-width:320px;
+
+        text-align:center;
+
+        padding:18px;
+
+        border-radius:18px;
+
+        font-size:18px;
+
+        background:
+        rgba(255,255,255,0.04);
+    }
+
+}
