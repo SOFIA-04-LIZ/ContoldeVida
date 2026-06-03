@@ -1083,37 +1083,37 @@ const cadenasData = [
 
     {
         cadena:"7 ELEVEN",
-        diasAceptacion:115
+        diasAceptacion:95
     },
 
     {
         cadena:"ARAMBURO",
-        diasAceptacion:115
+        diasAceptacion:95
     },
 
     {
         cadena:"OXXO",
-        diasAceptacion:135
+        diasAceptacion:120
     },
 
     {
         cadena:"WAL MART",
-        diasAceptacion:115
+        diasAceptacion:95
     },
 
      {
         cadena:"ASTURIANO",
-        diasAceptacion:115
+        diasAceptacion:95
     },
 
      {
         cadena:"CHEDRAUI",
-        diasAceptacion:115
+        diasAceptacion:95
     },
 
      {
         cadena:"CITY CLUB",
-        diasAceptacion:165
+        diasAceptacion:150
     },
   
       {
@@ -1123,17 +1123,17 @@ const cadenasData = [
 
       {
         cadena:"CALIMAX",
-        diasAceptacion:115
+        diasAceptacion:95
     },
     
       {
         cadena:"CASA LEY",
-        diasAceptacion:115
+        diasAceptacion:95
     },
 
      {
         cadena:"CITY FRESKO",
-        diasAceptacion:115
+        diasAceptacion:95
     },
     {
         cadena:"CONASUPER",
@@ -1142,41 +1142,41 @@ const cadenasData = [
 
       {
         cadena:"COSTCO",
-        diasAceptacion:115
+        diasAceptacion:95
     },
 
     {
         cadena:"EL DUERO",
-        diasAceptacion:115
+        diasAceptacion:95
     },
 
     {
         cadena:"EXTRA",
-        diasAceptacion:115
+        diasAceptacion:95
     },
 
      {
         cadena:"FUTURAMA",
-        diasAceptacion:135
+        diasAceptacion:120
     },
 
      {
         cadena:"GO MART",
-        diasAceptacion:115
+        diasAceptacion:95
     },
 
     {
         cadena:"HEB",
-        diasAceptacion:195
+        diasAceptacion:180
     },
     {
         cadena:"KIOSKO",
-        diasAceptacion:115
+        diasAceptacion:95
     },
 
     {
         cadena:"LA EUROPEA",
-        diasAceptacion:195
+        diasAceptacion:180
     },
     {
         cadena:"OPERADORA MERCO",
@@ -1185,31 +1185,31 @@ const cadenasData = [
 
     {
         cadena:"PREMIUM BEERS",
-        diasAceptacion:255
+        diasAceptacion:240
     },
     {
         cadena:"SAMS CLUB",
-        diasAceptacion:115
+        diasAceptacion:95
     },
 
     {
         cadena:"SAN FRANCISCO DE ASIS",
-        diasAceptacion:115
+        diasAceptacion:95
     },
 
     {
         cadena:"SMART",
-        diasAceptacion:195
+        diasAceptacion:180
     },
 
     {
         cadena:"SORIANA",
-        diasAceptacion:165
+        diasAceptacion:150
     },
 
     {
         cadena:"SUPER BARA",
-        diasAceptacion:115
+        diasAceptacion:95
     },
 
     {
@@ -1235,12 +1235,12 @@ const cadenasData = [
 
     {
         cadena:"VIG S",
-        diasAceptacion:115
+        diasAceptacion:95
     },
 
     {
         cadena:"ZORRO",
-        diasAceptacion:115
+        diasAceptacion:95
     }
 
 
