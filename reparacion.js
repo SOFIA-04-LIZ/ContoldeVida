@@ -1201,7 +1201,7 @@ function calcularVida(){
 
         resultado = "✔ DENTRO DE FRESCURA";
 
-    }else if(porcentaje > 59  && porcentaje< 80){
+    }else if(porcentaje > 59  && porcentaje< 93){
 
         resultado = "⚠ VALIAR CON ENCARGADO DE FRESCURA";
     } else{
