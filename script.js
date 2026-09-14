@@ -1189,6 +1189,9 @@ function calcularVida(){
         (1000 * 60 * 60 * 24)
     );
 
+    const diasParaVencer =
+    producto.vidaMaxima - diasActuales;
+
     const porcentaje =
     (
         diasActuales /
@@ -1224,6 +1227,10 @@ function calcularVida(){
     document.getElementById("diasActuales")
     .textContent =
     diasActuales;
+
+    document.getElementById("diasParaVencer")
+    .textContent =
+    diasParaVencer;
 
     document.getElementById("porcentaje")
     .textContent =
