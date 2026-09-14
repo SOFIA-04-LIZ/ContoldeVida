@@ -609,7 +609,8 @@ ESTATUS
     );
 }
 
-.Validar{
+.Validar,
+.validar{
 
     background:linear-gradient(
         135deg,
@@ -856,4 +857,8 @@ FIX MENU MOBILE
         rgba(255,255,255,0.04);
     }
 
+}
+.estatus.validar{
+    color:#422006;
+    overflow-wrap:break-word;
 }

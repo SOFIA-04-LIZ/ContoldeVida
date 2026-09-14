@@ -1199,8 +1199,22 @@ function calcularVida(){
     ) * 100;
 
     let resultado = "";
+    let claseEstatus = "";
 
-    if(porcentaje > 30){
+    if(document.body.dataset.modo === "cargas"){
+
+        if(porcentaje < 60){
+            resultado = "✔ APTA PARA VENTA";
+            claseEstatus = "aceptar";
+        }else if(porcentaje <= 80){
+            resultado = "⚠ VALIDAR CON EL SUPERVISOR DE FRESCURA";
+            claseEstatus = "validar";
+        }else{
+            resultado = "✖ NO APTA PARA VENTA";
+            claseEstatus = "rechazar";
+        }
+
+    }else if(porcentaje > 30){
 
         resultado = "✖ RECHAZAR";
 
@@ -1244,19 +1258,11 @@ function calcularVida(){
 
     estatus.classList.remove(
         "aceptar",
-        "rechazar"
+        "rechazar",
+        "validar"
     );
 
-    if(resultado === "✔ ACEPTAR"){
-
-        estatus.classList.add(
-            "aceptar"
-        );
-
-    }else{
-
-        estatus.classList.add(
-            "rechazar"
-        );
-    }
+    estatus.classList.add(
+        claseEstatus || (resultado === "✔ ACEPTAR" ? "aceptar" : "rechazar")
+    );
 }

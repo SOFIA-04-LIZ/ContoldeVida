@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Grupo Modelo | Control de Vida</title>
+    <title>Grupo Modelo | Cargas</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -19,7 +19,7 @@
 
 </head>
 
-<body>
+<body data-modo="cargas">
 
 <div class="overlay"></div>
 
@@ -41,11 +41,11 @@
             Canal Moderno
         </a>
 
-        <a href="reparacion.html" class="active">
+        <a href="reparacion.html">
             Reparación
         </a>
 
-        <a href="cargas.html">
+        <a href="cargas.html" class="active">
             Cargas
         </a>
 
@@ -57,8 +57,7 @@
 
     </div>
 
-</nav> 
-
+</nav>
 
 <div class="container">
 
@@ -66,9 +65,9 @@
 
         <div>
 
-            <h1>CONTROL DE VIDA REPARACION</h1>
+            <h1>CARGAS</h1>
 
-            <p>GRUPO MODELO · CALIDAD DE PRODUCTO</p>
+            <p>GRUPO MODELO · VALIDACIÓN PARA VENTA</p>
 
         </div>
 
@@ -113,7 +112,7 @@
 
         <button onclick="calcularVida()">
 
-            ANALIZAR PRODUCTO
+            VALIDAR CARGA
 
         </button>
 
@@ -161,7 +160,15 @@
 
             <div class="info">
 
-                <span>% VIDA UTIL</span>
+                <span>DÍAS PARA VENCER</span>
+
+                <strong id="diasParaVencer"></strong>
+
+            </div>
+
+            <div class="info">
+
+                <span>% VIDA TRANSCURRIDA</span>
 
                 <strong>
                     <strong id="porcentaje"></strong>%
@@ -177,7 +184,7 @@
 
 </div>
 
-<script src="reparacion.js"></script>
+<script src="script.js"></script>
 <script>
 
 const menuToggle =
@@ -192,7 +199,7 @@ menuToggle.addEventListener("click", function(){
 
 });
 
-</script>
+</script>      
 
 </body>
 
