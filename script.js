@@ -1072,7 +1072,8 @@ const productos = [
 { sku:"3008478", material:"PACIFICO 6 PK 24/355 ML NR CI", vidaMaxima:360 },
 { sku:"3008440", material:"PS 6PK 24/355 ML NR", vidaMaxima:360 },
 { sku:"3008478", material:"PACIFICO 6 PK 24/355 ML NR CI", vidaMaxima:360 },
-{ sku:"3008440", material:"PS 6PK 24/355 ML NR", vidaMaxima:360 }
+{ sku:"3008440", material:"PS 6PK 24/355 ML NR", vidaMaxima:360 },
+{ sku:"3018931", material:"CL FAM 12/940 ML ETIQUETA RGB", vidaMaxima:360 }
     
 
 ];
