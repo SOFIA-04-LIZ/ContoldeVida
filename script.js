@@ -1240,10 +1240,10 @@ function calcularVida(){
 
     if(document.body.dataset.modo === "cargas"){
 
-        if(porcentaje < 60){
+        if(porcentaje < 45){
             resultado = "✔ APTA PARA VENTA";
             claseEstatus = "aceptar";
-        }else if(porcentaje <= 80){
+        }else if(porcentaje <= 60){
             resultado = "⚠ VALIDAR CON EL SUPERVISOR DE FRESCURA";
             claseEstatus = "validar";
         }else{
