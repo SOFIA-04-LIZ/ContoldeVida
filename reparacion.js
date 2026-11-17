@@ -5289,11 +5289,11 @@ function calcularVida(){
 
     let resultado = "";
 
-    if(porcentaje > 0  && porcentaje< 60){
+    if(porcentaje > 0  && porcentaje< 45){
 
         resultado = "✔ DENTRO DE FRESCURA";
 
-    }else if(porcentaje > 59  && porcentaje< 80){
+    }else if(porcentaje > 45  && porcentaje< 55){
 
         resultado = "⚠ VALIAR CON ENCARGADO DE FRESCURA";
     } else{
